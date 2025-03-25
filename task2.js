@@ -364,3 +364,47 @@ function Most_frequent_element(obj){
 }
 const obj = { a: "apple", b: "banana", c: "apple", d: "banana", e: "banana" ,f:'orange',g:'orange',h:'orange',i:'orange'};
 console.log(Most_frequent_element(obj));
+console.log('33----------------------------')
+
+function leapyears(num){
+  if(num%4==0){
+    return'leap year'
+  }
+  else{
+    return 'not a leap year'
+  }
+}
+console.log(leapyears(2001))
+// Implement a function to reverse a string without using .reverse().
+console.log('34----------------------------')
+
+function reverse_string(str){
+    let string=''
+    for(i=str.length-1;0<=i;i--){
+       string+=str[i]
+    }
+    return string
+}
+console.log(reverse_string('hello'))
+console.log('35----------------------------')
+//Here's a JavaScript function to find the most frequent element in an array:
+
+function mostFrequentElement(arr) {
+    let frequencyMap = {};
+    let maxCount = 0;
+    let mostFrequent = null;
+
+    for(let num of arr){
+        frequencyMap[num]= (frequencyMap[num]||0)+1
+    
+    if(frequencyMap[num]>maxCount){
+        maxCount=frequencyMap[num]
+        mostFrequent=num
+    }
+    }
+    return mostFrequent;
+}
+
+// Example usage:
+console.log(mostFrequentElement([1, 3, 2, 3, 4, 3, 5, 3, 2, 1])); // Output: 3
+console.log(mostFrequentElement(["apple", "banana", "apple", "orange", "apple", "banana"])); // Output: "apple"
