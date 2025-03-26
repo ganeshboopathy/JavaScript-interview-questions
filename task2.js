@@ -408,3 +408,104 @@ function mostFrequentElement(arr) {
 // Example usage:
 console.log(mostFrequentElement([1, 3, 2, 3, 4, 3, 5, 3, 2, 1])); // Output: 3
 console.log(mostFrequentElement(["apple", "banana", "apple", "orange", "apple", "banana"])); // Output: "apple"
+
+
+console.log('35----------------------------')
+// Check if an array contains at least one even number using some().
+
+function least_one_even_number(arr){
+    return arr.some((num,index,arr)=>{
+       return num%2==0
+    })
+}
+console.log(least_one_even_number([1, 3, 5, 7,8]))
+
+console.log('36----------------------------')
+// Verify if all elements in an array are greater than 10 using every().
+
+function all_greater_than_10(arr){
+    return arr.every((num,ind,arr)=>{
+        return num>10
+    })
+}
+console.log(all_greater_than_10([2, 15, 20, 25]))
+
+console.log('37----------------------------')
+// Check if at least one person in an array is an adult (age ≥ 18) using some().
+
+function person_in_an_array_is_an_adult(arr){
+    return arr.some((person,ind,arr)=>{
+          return person.age>18
+    })
+} 
+console.log(person_in_an_array_is_an_adult([{ name: "John", age: 16 }, { name: "Anna", age: 22 }]))
+
+console.log('38----------------------------')
+//Determine if all strings in an array have a length greater than 5 using every().
+
+function all_strings_longer_than_five(arr){
+    return arr.every((str,ind,arr)=>{
+        return str.length>5
+    })
+}
+console.log(all_strings_longer_than_five(["elephant", "giraffe", "zebra "]))
+
+console.log('39----------------------------')
+//Check if at least one student has failed (score < 40) using some().
+
+function least_one_student_has_failed(arr){
+    return arr.some((score,ind,arr)=>{
+        return score<40
+    })
+}
+console.log(least_one_student_has_failed([85, 90, 78, 35, 50]))
+
+console.log('40----------------------------')
+//Ensure all elements in an array are positive numbers using every().
+
+function all_elements_in_an_array_are_positive_numbers(arr){
+    return arr.every((num,ind,arr)=>{
+        return num>0
+    })
+}
+console.log(all_elements_in_an_array_are_positive_numbers([3, 5, 2, -8, 10]))
+
+console.log('41----------------------------')
+// Use some() to check if an array contains at least one palindrome word.
+
+function least_one_palindrome_word(arr){
+    return arr.some((word,ind,arr)=>{
+        return word.split('').reverse().join('').toLowerCase()==word.toLowerCase()
+    })
+}
+console.log(least_one_palindrome_word(["hello", "madam", "world"]))
+
+console.log('42----------------------------')
+// Verify if every number in an array is a multiple of 3 using every().
+
+function every_number_in_an_array_is_a_multiple_of_3(arr){
+    return arr.every((num,ind,arr)=>{
+        return num%3==0
+    })
+}
+console.log(every_number_in_an_array_is_a_multiple_of_3([3, 9, 12, 18]))
+
+console.log('43----------------------------')
+// Check if at least one product in a cart is out of stock (stock === 0) using some()
+
+function least_one_product_in_a_cart_is_out_of_stock(arr){
+    return arr.some((product,ind,arr)=>{
+        return product.stock>0
+    })
+}
+console.log(least_one_product_in_a_cart_is_out_of_stock([{ name: "Shirt", stock: 1 }, { name: "Jeans", stock: 0 }]))
+
+console.log('44----------------------------')
+// Determine if all elements in an array are of type "string" using every().
+
+function all_elements_in_an_array_are_strings(arr){
+    return arr.every((element,ind,arr)=>{
+        return typeof element === typeof " "
+    })
+}
+console.log(all_elements_in_an_array_are_strings( ["apple", "banana", "grape",90]))
