@@ -509,3 +509,58 @@ function all_elements_in_an_array_are_strings(arr){
     })
 }
 console.log(all_elements_in_an_array_are_strings( ["apple", "banana", "grape",90]))
+
+console.log('44----------------------------')
+
+// for loop 
+
+function loop(num){
+    let myarr=[]
+    let reverse =[]
+    for(i=0; i<=num;i++){
+     myarr.push(i)
+    }
+    console.log(myarr)   
+
+    reverse= myarr.reverse()
+     console.log(reverse)    
+}
+loop(10)
+let b=10+1
+for(i=0 ;i<=10;i++){
+    b--
+    console.log(i ,b )
+    
+}
+
+console.log('44----------------------------')
+// binnary code 
+function binary(num){
+    let a=num
+    let myarr=[]
+    while(a>0){
+        
+        myarr.push(a%2)
+       a= Math.floor(a/2)
+    }
+    return Number(myarr.reverse().join(''))
+    
+}
+console.log(binary(107))
+
+console.log('45----------------------------')
+
+//Binary to Decimal Conversion
+function Binary_to_Decimal_Conversion(num){
+   let a=num.split('')
+   let  b= a.length-1
+    let myarr=[]
+    let c=0
+    for(i=0;i<num.length;i++){
+      myarr.push(a[i]*Math.pow(2,b))
+      b--
+      c+=myarr[i]
+    }
+    return c
+}
+console.log(Binary_to_Decimal_Conversion('1010'))
