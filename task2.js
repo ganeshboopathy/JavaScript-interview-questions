@@ -564,3 +564,73 @@ function Binary_to_Decimal_Conversion(num){
     return c
 }
 console.log(Binary_to_Decimal_Conversion('1010'))
+console.log('46----------------------------')
+// Find the First Non-Repeating Character in a String
+function firstNonRepeatingChar(str) {
+    let freq = {};
+    for (let ch of str) {
+        freq[ch] = (freq[ch] || 0) + 1;
+    }
+    for (let ch of str) {
+        if (freq[ch] === 1) {
+            return ch;
+        }
+    }
+    return null; // if no unique char
+}
+console.log(firstNonRepeatingChar("swiss")); // Output: "w"
+
+console.log('47----------------------------')
+//Flatten a Nested Array Without Using flat()
+
+function flattenArray(arr) {
+    let result = [];
+    for (let item of arr) {
+        if (Array.isArray(item)) {
+            result = result.concat(flattenArray(item));
+        } else {
+            result.push(item);
+        }
+    }
+    return result;
+}
+console.log(flattenArray([1, [2, [3, 4]], 5])); // Output: [1,2,3,4,5]
+
+console.log('48----------------------------')
+// Count the Occurrences of Each Word in a Sentence
+
+function wordFrequency(sentence) {
+    let words = sentence.toLowerCase().split(/\W+/);
+    let freq = {};
+    for (let word of words) {
+        if (word) {
+            freq[word] = (freq[word] || 0) + 1;
+        }
+    }
+    return freq;
+}
+console.log(wordFrequency("Hello world, hello JavaScript world!"));
+// Output: { hello: 2, world: 2, javascript: 1 }
+
+console.log('49----------------------------')
+// Find the Longest Word in a Sentence
+
+function longestWord(sentence) {
+    let words = sentence.split(" ");
+    return words.reduce((longest, word) => 
+        word.length > longest.length ? word : longest
+    , "");
+}
+console.log(longestWord("I love programming in JavaScript"));
+// Output: "programming"
+
+console.log('50----------------------------')
+
+//Check if Two Strings Are Rotations of Each Other
+
+function isRotation(str1, str2) {
+    if (str1.length !== str2.length) return false;
+    return (str1 + str1).includes(str2);
+}
+console.log(isRotation("waterbottle", "erbottlewat")); // Output: true
+console.log(isRotation("hello", "llohe")); // Output: true
